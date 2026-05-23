@@ -227,7 +227,7 @@ a {
   font-family: var(--font-heading);
   font-size: clamp(8rem, 20vw, 16.5rem);
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.1);
+  -webkit-text-stroke: 1.5px rgba(220, 0, 212, 0.25);
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
