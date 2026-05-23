@@ -1,9 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './index.css';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const lastScrollY = useRef(0);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_d5h8bvm', 'template_nkdb9j7', e.target, 'ZMeJ2XUlOOle2Bm8J')
+      .then((result) => {
+          alert('Message envoyé avec succès !');
+      }, (error) => {
+          alert('Erreur lors de l\'envoi : ' + error.text);
+      });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +73,6 @@ function App() {
         <section id="about" className="section">
           <div className="about-header">
             <h2 className="section-title">À PROPOS DE MOI</h2>
-            <img src="/dhane.png" alt="Dhane" className="about-photo" />
           </div>
           <div className="about-content">
             <p className="about-text">
@@ -105,36 +116,41 @@ function App() {
             Créons quelque chose d'inoubliable, du concept au montage final. Grâce au motion design, aux transitions fluides et au storytelling créatif, je donne vie à votre vision.
           </p>
 
-          <form className="form">
+          <form className="form" id="contact-form" onSubmit={sendEmail}>
             <div className="form-group">
               <label>Nom complet</label>
-              <input type="text" className="form-input" placeholder="Vince Wilder" />
+              <input type="text" name="user_name" className="form-input" placeholder="Dhane" required />
             </div>
             
             <div className="form-group">
               <label>Email</label>
-              <input type="email" className="form-input" placeholder="vincewilder@gmail.com" />
+              <input type="email" name="user_email" className="form-input" placeholder="sramadane2@gmail.com" required />
+            </div>
+
+            <div className="form-group">
+              <label>WhatsApp</label>
+              <input type="tel" name="user_whatsapp" className="form-input" placeholder="+33 6 00 00 00 00" required />
             </div>
 
             <div className="form-group">
               <label>Service souhaité ?</label>
-              <select className="form-input">
-                <option>Sélectionner...</option>
-                <option>Montage Vidéo</option>
-                <option>Motion Design</option>
+              <select name="service" className="form-input" required>
+                <option value="">Sélectionner...</option>
+                <option value="short">Short ou Reel</option>
+                <option value="long">Vidéo long format</option>
+                <option value="motion">Motion Design</option>
               </select>
             </div>
 
             <div className="form-group">
               <label>Comment puis-je vous aider ?</label>
-              <textarea className="form-input" placeholder="Bonjour, je vous contacte pour..."></textarea>
+              <textarea name="message" className="form-input" placeholder="Bonjour, je vous contacte pour..." required></textarea>
             </div>
 
-            <button type="button" className="btn-submit">ENVOYER</button>
+            <button type="submit" className="btn-submit">ENVOYER</button>
           </form>
         </section>
       </main>
-
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-section">
