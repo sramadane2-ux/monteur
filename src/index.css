@@ -50,7 +50,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: transparent;
+  background: radial-gradient(ellipse at 50% 0%, rgba(180, 0, 170, 0.3) 0%, rgba(80, 0, 100, 0.15) 50%, transparent 100%);
   transition: padding 0.5s cubic-bezier(0.16, 1, 0.3, 1),
               background 0.5s ease,
               box-shadow 0.5s ease;
@@ -112,14 +112,14 @@ a {
 }
 
 .btn-contact {
-  background: transparent;
+  background: rgba(220, 0, 212, 0.15);
   color: var(--text-main);
   border: 1px solid var(--violet);
   padding: 0.4rem 1.5rem;
   border-radius: 100px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 0 8px var(--violet-glow);
+  box-shadow: 0 0 12px var(--violet-glow), inset 0 0 10px rgba(220, 0, 212, 0.1);
   white-space: nowrap;
 }
 
@@ -268,7 +268,7 @@ a {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   max-width: 1000px;
   margin: 0.8rem auto;
@@ -356,16 +356,25 @@ a {
   margin-bottom: 2rem;
 }
 
-.about-photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  object-position: center;
+.about-photo-wrapper {
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   flex-shrink: 0;
-  border: none;
-  transform: scale(1.0);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--violet);
+  box-shadow: 0 0 15px rgba(220, 0, 212, 0.3);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.15); /* Zoom effect */
 }
 
 .about-layout {
@@ -550,9 +559,10 @@ textarea.form-input {
 
 /* ─── FOOTER ─── */
 .footer {
-  background: var(--violet-dark);
+  background: linear-gradient(135deg, #1a002a 0%, #4d0066 100%);
   padding: 2rem 1rem;
   margin-top: 4rem;
+  border-top: 1px solid rgba(220, 0, 212, 0.25);
 }
 
 .footer-content {
@@ -592,4 +602,84 @@ textarea.form-input {
   padding-top: 1rem;
 }
 
+/* ─── MODAL ─── */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
 
+.modal-content {
+  background: var(--bg-dark);
+  border: 1px solid rgba(220, 0, 212, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(220, 0, 212, 0.1);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: slideUp 0.3s ease;
+}
+
+.modal-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(220, 0, 212, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: var(--violet);
+  border: 2px solid var(--violet);
+}
+
+.modal-content h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.modal-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.btn-modal {
+  background: var(--violet);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-modal:hover {
+  transform: scale(1.05);
+  background: #ff1aff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

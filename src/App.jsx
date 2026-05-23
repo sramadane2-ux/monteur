@@ -4,6 +4,7 @@ import './index.css';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   const sendEmail = (e) => {
@@ -11,7 +12,8 @@ function App() {
 
     emailjs.sendForm('service_d5h8bvm', 'template_kaxw90y', e.target, 'ZMeJ2XUlOOle2Bm8J')
       .then((result) => {
-          alert('Message envoyé avec succès !');
+          setIsModalOpen(true);
+          e.target.reset();
       }, (error) => {
           alert('Erreur lors de l\'envoi : ' + error.text);
       });
@@ -61,7 +63,7 @@ function App() {
 
           <div className="portfolio-grid">
             {/* Grid of 8 vertical video placeholders matching the screenshot */}
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+            {[1, 2, 3, 4, 5, 6].map((item) => (
               <div key={item} className="portfolio-item">
                 <div className="portfolio-img" style={{ background: `linear-gradient(to bottom, #1a1a1a, #0a0a0a)` }}></div>
                 <div className="play-icon">▶</div>
@@ -73,10 +75,13 @@ function App() {
         <section id="about" className="section">
           <div className="about-header">
             <h2 className="section-title">À PROPOS DE MOI</h2>
+            <div className="about-photo-wrapper">
+              <img src="/dhane.png" alt="Dhane" className="about-photo-img" />
+            </div>
           </div>
           <div className="about-content">
-            <p className="about-text">
-                Bonjour, je m'appelle <strong className="about-name">Dhane</strong> — c'est sous ce nom que vous me retrouvez sur les réseaux sociaux. Je suis monteur vidéo et expert en motion design, spécialisé sur After Effects, Premiere Pro et Blender. J'aide les créateurs à raconter des histoires captivantes.
+              <p className="about-text">
+                Bonjour ! Sur les réseaux sociaux, on m'appelle <strong className="about-name">Dhane</strong>. En tant que monteur vidéo et motion designer, je combine le montage dynamique et la 3D pour aider les créateurs à raconter des histoires captivantes.
               </p>
 
               <div className="experience">
@@ -118,8 +123,8 @@ function App() {
 
           <form className="form" id="contact-form" onSubmit={sendEmail}>
             <div className="form-group">
-              <label>Nom complet</label>
-              <input type="text" name="user_name" className="form-input" placeholder="Dhane" required />
+              <label>Nom de la chaîne</label>
+              <input type="text" name="user_name" className="form-input" placeholder="Nom de votre chaîne" required />
             </div>
             
             <div className="form-group">
@@ -179,9 +184,20 @@ function App() {
         </div>
         <div className="footer-bottom">
           <span>© Copyright 2026. Tous droits réservés</span>
-          <span>Créé par Vince</span>
+          <span>Créé par Dhane</span>
         </div>
       </footer>
+
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-icon">✓</div>
+            <h3>Message envoyé !</h3>
+            <p>Merci pour votre message. Je vous répondrai dans les plus brefs délais.</p>
+            <button className="btn-modal" onClick={() => setIsModalOpen(false)}>Fermer</button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
