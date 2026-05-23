@@ -9,7 +9,7 @@ function App() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_d5h8bvm', 'template_nkdb9j7', e.target, 'ZMeJ2XUlOOle2Bm8J')
+    emailjs.sendForm('service_d5h8bvm', 'template_kaxw90y', e.target, 'ZMeJ2XUlOOle2Bm8J')
       .then((result) => {
           alert('Message envoyé avec succès !');
       }, (error) => {
