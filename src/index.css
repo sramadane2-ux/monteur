@@ -28,7 +28,14 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: radial-gradient(circle at 50% 0%, #200028 0%, #0b0010 45%, #040007 100%) no-repeat fixed;
+  background-color: #040007;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, #200028 0%, #0b0010 45%, #040007 100%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  background-attachment: fixed, fixed, fixed;
+  background-repeat: repeat, repeat, no-repeat;
   color: var(--text-main);
   line-height: 1.5;
   overflow-x: hidden;
@@ -200,8 +207,26 @@ a {
 
 /* ─── HERO ─── */
 .hero {
+  position: relative;
   text-align: center;
   padding: 0 2rem 4rem;
+}
+
+.hero-header::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 120%;
+  height: 140%;
+  background-image: 
+    linear-gradient(rgba(220, 0, 212, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 0, 212, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero-title {
@@ -220,6 +245,51 @@ a {
   position: relative;
   z-index: 2;
   pointer-events: none;
+}
+
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.floating-icon {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  opacity: 1;
+}
+
+.icon-blender {
+  top: 5%;
+  left: 20%;
+  transform: rotate(-15deg);
+  filter: drop-shadow(0 0 12px rgba(234, 118, 0, 0.7));
+}
+
+.icon-vscode {
+  top: 10%;
+  right: 20%;
+  transform: rotate(15deg);
+  filter: drop-shadow(0 0 12px rgba(31, 156, 240, 0.7));
+}
+
+.icon-pr {
+  top: 35%;
+  right: 18%;
+  transform: rotate(10deg);
+  filter: drop-shadow(0 0 12px rgba(153, 153, 255, 0.7));
+}
+
+.icon-ae {
+  top: 55%;
+  left: 25%;
+  transform: rotate(-5deg);
+  filter: drop-shadow(0 0 12px rgba(217, 152, 255, 0.7));
 }
 
 .hero-subtitle {
@@ -266,6 +336,10 @@ a {
   scroll-margin-top: 100px;
 }
 
+.color-ae { color: #D998FF; font-weight: 500; }
+.color-pr { color: #9999FF; font-weight: 500; }
+.color-blender { color: #ea7600; font-weight: 500; }
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -297,7 +371,7 @@ a {
 }
 
 .portfolio-item {
-  aspect-ratio: 9/16;
+  aspect-ratio: 16/9;
   background: #111;
   border-radius: 8px;
   overflow: hidden;
@@ -305,24 +379,41 @@ a {
   cursor: pointer;
 }
 
-.portfolio-img {
+.portfolio-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.7;
-  transition: opacity 0.3s, transform 0.5s;
+  background: #0a0a0a;
+  display: block;
 }
 
-.portfolio-item:hover .portfolio-img {
-  opacity: 1;
-  transform: scale(1.05);
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+  transition: opacity 0.3s;
+}
+
+.video-overlay:hover .play-overlay-gradient {
+  opacity: 0.7;
 }
 
 .play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
   background: rgba(0,0,0,0.5);
@@ -333,6 +424,13 @@ a {
   color: white;
   font-size: 1.2rem;
   border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.video-overlay:hover .play-icon {
+  transform: scale(1.1);
+  background: var(--violet);
+  border-color: var(--violet);
 }
 
 /* ─── ABOUT ME ─── */
