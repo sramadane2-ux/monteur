@@ -42,12 +42,25 @@ function App() {
   // Remplacez ces faux IDs par les vrais IDs de vos vidéos YouTube une fois uploadées.
   // L'ID est la partie après "?v=" dans le lien YouTube.
   const youtubeVideos = [
-    'dQw4w9WgXcQ', // Remplacez par votre ID 1
-    'jNQXAC9IVRw', // Remplacez par votre ID 2
-    'tgbNymZ7vqY', // Remplacez par votre ID 3
-    'bHQqvYy5KYo', // Remplacez par votre ID 4
-    'kJQP7kiw5Fk', // Remplacez par votre ID 5
-    '9bZkp7q19f0'  // Remplacez par votre ID 6
+    'uLsqfws34so', // Vidéo 1 (Dhane)
+    'I3B6fQTqYv4', // Vidéo 2
+    'ey__4skWICQ', // Vidéo 3 (À côté de la 2ème)
+    'm_0-IPOmoHA', // Vidéo 4
+    'HMXQKCbQeBY', // Vidéo 5 (Nouvelle)
+    'VkkurZIOrdc', // Vidéo 6 (Remplacée)
+    'wO4oPYzIKbU', // Vidéo 7
+    'HYOL008DFK8', // Vidéo 8
+    'ts_shREwRbI'  // Vidéo 9 (Remplacée)
+  ];
+
+  // IDs YouTube pour la section Reels (format horizontal 16:9 comme demandé)
+  const reelVideos = [
+    'VNT6x-EFq30', // Reel 1
+    'VSJVIuNXolw', // Reel 2
+    '-2Ru9GUt06Q', // Reel 3
+    'TjHUSfycZ7w', // Reel 4
+    'h3lFLkqYEcg', // Reel 5
+    'dQw4w9WgXcQ'  // Remplacez par votre ID Reel 6
   ];
 
   const sendEmail = (e) => {
@@ -158,9 +171,22 @@ function App() {
           </div>
 
           <div className="portfolio-grid">
-            {/* Grid of 6 vertical video components */}
+            {/* Grid of 9 horizontal video components */}
             {youtubeVideos.map((videoId, index) => (
               <VideoCard key={index} videoId={videoId} />
+            ))}
+          </div>
+
+          {/* Nouvelle section REELS */}
+          <div className="reels-header" style={{ marginTop: '8rem', marginBottom: '3rem', textAlign: 'center' }}>
+            <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}>
+              <span className="hero-main-text">REELS <span className="ampersand">&</span> SHORTS</span>
+            </h2>
+          </div>
+
+          <div className="portfolio-grid">
+            {reelVideos.map((videoId, index) => (
+              <VideoCard key={`reel-${index}`} videoId={videoId} />
             ))}
           </div>
         </section>
