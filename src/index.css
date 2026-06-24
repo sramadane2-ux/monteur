@@ -343,10 +343,14 @@ a {
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0.8rem auto;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 0 1rem;
+}
+
+.vertical-grid {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 @media (max-width: 768px) {

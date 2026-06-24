@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './index.css';
 
-const VideoCard = ({ videoId }) => {
+const VideoCard = ({ videoId, isEmpty, isVertical }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="portfolio-item">
-      {isPlaying ? (
+    <div className="portfolio-item" style={{ paddingBottom: isVertical ? '177.77%' : '56.25%' }}>
+      {isPlaying && !isEmpty ? (
         <iframe
           className="portfolio-video"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
@@ -16,12 +16,19 @@ const VideoCard = ({ videoId }) => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
+      ) : isEmpty ? (
+        <div className="video-overlay empty-card" style={{ background: 'rgba(255, 255, 255, 0.02)', border: '2px dashed rgba(220, 0, 212, 0.3)' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+            <span style={{ fontSize: '3rem', color: 'rgba(220, 0, 212, 0.5)' }}>+</span>
+            <p style={{ marginTop: '1rem', color: 'rgba(255, 255, 255, 0.5)', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.9rem' }}>Bientôt</p>
+          </div>
+        </div>
       ) : (
         <div 
           className="video-overlay" 
           onClick={() => setIsPlaying(true)}
           style={{
-            backgroundImage: videoId ? `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)` : 'linear-gradient(to bottom, #1a1a1a, #0a0a0a)',
+            backgroundImage: `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
@@ -60,7 +67,15 @@ function App() {
     '-2Ru9GUt06Q', // Reel 3
     'TjHUSfycZ7w', // Reel 4
     'h3lFLkqYEcg', // Reel 5
-    'dQw4w9WgXcQ'  // Remplacez par votre ID Reel 6
+    null           // Vidéo 6 (Carte vide)
+  ];
+
+  // IDs YouTube pour la section des vrais Reels (format vertical 9:16)
+  const trueReels = [
+    null, // Vrai Reel 1
+    null, // Vrai Reel 2
+    null, // Vrai Reel 3
+    null  // Vrai Reel 4
   ];
 
   const sendEmail = (e) => {
@@ -177,16 +192,31 @@ function App() {
             ))}
           </div>
 
-          {/* Nouvelle section REELS */}
+          {/* Nouvelle section REELS REMAKES */}
           <div className="reels-header" style={{ marginTop: '8rem', marginBottom: '3rem', textAlign: 'center' }}>
             <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}>
               <span className="hero-main-text">REELS <span className="ampersand">&</span> SHORTS</span>
             </h2>
+            <p className="hero-sub" style={{ marginTop: '0.5rem', color: 'var(--violet)', opacity: 1, letterSpacing: '0.2em', fontWeight: 600 }}>REMAKES</p>
           </div>
 
           <div className="portfolio-grid">
             {reelVideos.map((videoId, index) => (
-              <VideoCard key={`reel-${index}`} videoId={videoId} />
+              <VideoCard key={`reel-${index}`} videoId={videoId} isEmpty={!videoId} />
+            ))}
+          </div>
+
+          {/* Nouvelle section VRAIS REELS 9:16 */}
+          <div className="reels-header" style={{ marginTop: '8rem', marginBottom: '3rem', textAlign: 'center' }}>
+            <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}>
+              <span className="hero-main-text">VRAIS <span className="ampersand">REELS</span></span>
+            </h2>
+            <p className="hero-sub" style={{ marginTop: '0.5rem', color: 'var(--violet)', opacity: 1, letterSpacing: '0.2em', fontWeight: 600 }}>PROJETS RÉALISÉS</p>
+          </div>
+
+          <div className="portfolio-grid vertical-grid">
+            {trueReels.map((videoId, index) => (
+              <VideoCard key={`true-reel-${index}`} videoId={videoId} isEmpty={!videoId} isVertical={true} />
             ))}
           </div>
         </section>
