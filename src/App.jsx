@@ -251,11 +251,10 @@ function App() {
       {offerOpen && <OfferModal onClose={() => setOfferOpen(false)} />}
 
       <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-        <div className="nav-left">
-          <img src="/favicon-96x96.png" alt="Logo" className="header-logo" />
-        </div>
+        <div className="nav-left"></div>
         
         <div className={`nav-links ${scrolled ? 'nav-links--hidden' : ''}`}>
+          <img src="/favicon-96x96.png" alt="Logo" className="header-logo" />
           <a href="#home">Accueil</a>
           <a href="#work">Mes Projets</a>
           <a href="#about">Expertise</a>
@@ -263,8 +262,7 @@ function App() {
           <button className="btn-offer" onClick={() => setOfferOpen(true)}>✦ Mon Offre</button>
         </div>
 
-        <div className="nav-right">
-        </div>
+        <div className="nav-right"></div>
       </nav>
 
       <div className={`availability ${scrolled ? 'availability--floating' : ''}`}>
