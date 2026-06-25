@@ -329,7 +329,7 @@ function App() {
               <span className="hero-main-text">MONTEUR<br />VIDÉO <span className="ampersand">&</span></span>
             </h1>
             <p id="work" className="hero-sub">
-              Monteur Vidéo & Motion Designer | <span className="color-ae">After Effects</span>, <span className="color-pr">Premiere Pro</span> & <span className="color-blender">Blender</span>
+              <span className="color-ae">After Effects</span>, <span className="color-pr">Premiere Pro</span> &amp; <span className="color-blender">Blender</span>
             </p>
           </div>
 
@@ -337,7 +337,7 @@ function App() {
           <div className="reels-header" style={{ marginTop: '5rem', marginBottom: '3rem', textAlign: 'center', position: 'relative' }}>
             <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', marginBottom: 0 }}>
               <span className="hero-main-text">LONG <span className="ampersand">FORMAT</span></span>
-              <span className="handwritten-annotation" style={{ top: '48%', left: '60%', fontSize: 'clamp(1rem, 3.5vw, 2.5rem)' }}>Style Iman Gadzhi</span>
+              <span className="handwritten-annotation" style={{ top: '48%', left: '70%', fontSize: 'clamp(1rem, 3.5vw, 2.5rem)' }}>Style Iman Gadzhi</span>
             </h2>
             <p className="section-sub">YOUTUBE</p>
           </div>

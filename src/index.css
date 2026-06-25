@@ -47,7 +47,7 @@ a {
   text-decoration: none;
 }
 
-/* ── NAVBAR ── */
+/* ÔöÇÔöÇ NAVBAR ÔöÇÔöÇ */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -141,7 +141,7 @@ a {
   transform: translateY(-2px);
 }
 
-/* ─── AVAILABILITY BADGE ─── */
+/* ÔöÇÔöÇÔöÇ AVAILABILITY BADGE ÔöÇÔöÇÔöÇ */
 .availability {
   display: flex;
   align-items: center;
@@ -209,7 +209,7 @@ a {
   }
 }
 
-/* ─── HERO ─── */
+/* ÔöÇÔöÇÔöÇ HERO ÔöÇÔöÇÔöÇ */
 .hero {
   position: relative;
   text-align: center;
@@ -471,7 +471,7 @@ a {
   border-color: var(--violet);
 }
 
-/* ─── ABOUT ME ─── */
+/* ÔöÇÔöÇÔöÇ ABOUT ME ÔöÇÔöÇÔöÇ */
 .section {
   max-width: 1000px;
   margin: 0 auto;
@@ -631,7 +631,7 @@ a {
   position: relative;
 }
 
-/* ─── CONTACT FORM ─── */
+/* ÔöÇÔöÇÔöÇ CONTACT FORM ÔöÇÔöÇÔöÇ */
 .contact-desc {
   color: var(--text-muted);
   max-width: 600px;
@@ -710,7 +710,7 @@ textarea.form-input {
   background: var(--violet);
 }
 
-/* ─── FOOTER ─── */
+/* ÔöÇÔöÇÔöÇ FOOTER ÔöÇÔöÇÔöÇ */
 .footer {
   background: linear-gradient(135deg, #1a002a 0%, #4d0066 100%);
   padding: 2rem 1rem;
@@ -755,7 +755,7 @@ textarea.form-input {
   padding-top: 1rem;
 }
 
-/* ─── MODAL ─── */
+/* ÔöÇÔöÇÔöÇ MODAL ÔöÇÔöÇÔöÇ */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -837,7 +837,7 @@ textarea.form-input {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── OFFER BUTTON ── */
+/* ÔöÇÔöÇ OFFER BUTTON ÔöÇÔöÇ */
 .btn-offer {
   background: linear-gradient(135deg, rgba(220, 0, 212, 0.15), rgba(220, 0, 212, 0.05));
   border: 1px solid rgba(220, 0, 212, 0.6);
@@ -862,7 +862,7 @@ textarea.form-input {
   border-color: rgba(220, 0, 212, 1);
 }
 
-/* ── OFFER OVERLAY ── */
+/* ÔöÇÔöÇ OFFER OVERLAY ÔöÇÔöÇ */
 .offer-overlay {
   position: fixed;
   inset: 0;
@@ -877,7 +877,7 @@ textarea.form-input {
   animation: fadeIn 0.3s ease;
 }
 
-/* ── OFFER MODAL ── */
+/* ÔöÇÔöÇ OFFER MODAL ÔöÇÔöÇ */
 .offer-modal {
   position: relative;
   background: linear-gradient(135deg,
@@ -1138,7 +1138,7 @@ textarea.form-input {
   transform: none;
 }
 
-/* ── WhatsApp Mini Form ── */
+/* ÔöÇÔöÇ WhatsApp Mini Form ÔöÇÔöÇ */
 .offer-wa-form {
   display: flex;
   flex-direction: column;
@@ -1180,7 +1180,7 @@ textarea.form-input {
 }
 .offer-wa-success span { font-size: 1.3rem; }
 
-/* ── WhatsApp Mini Modal ── */
+/* ÔöÇÔöÇ WhatsApp Mini Modal ÔöÇÔöÇ */
 .wa-mini-overlay {
   position: fixed;
   inset: 0;
@@ -1233,4 +1233,52 @@ textarea.form-input {
   flex-direction: column;
   gap: 0.75rem;
 }
+/* ── MOBILE FIXES ── */
+@media (max-width: 768px) {
 
+  /* Navbar */
+  .navbar { padding: 1rem; }
+  .nav-left, .nav-right { display: none; }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+  }
+  .nav-links a { font-size: 0.78rem; white-space: nowrap; }
+  .header-logo { width: 28px; height: 28px; }
+  .btn-contact, .btn-offer { padding: 0.35rem 0.9rem; font-size: 0.72rem; }
+
+  /* Hero - empeche debordement horizontal */
+  .hero { padding: 0 1rem 2rem; overflow: hidden; }
+  .hero-title { font-size: clamp(5rem, 24vw, 8rem); }
+  .hero-subtitle {
+    font-size: clamp(5rem, 30vw, 12rem);
+    left: 0;
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    transform: translateY(-50%);
+  }
+  .hero-sub { margin-top: 2rem; font-size: 0.9rem; text-align: center; }
+  .handwritten-annotation { font-size: 1.1rem; white-space: nowrap; }
+
+  /* Icones vers les bords */
+  .icon-blender { left: 8% !important; top: 5% !important; }
+  .icon-vscode  { right: 8% !important; top: 8% !important; }
+  .icon-pr      { right: 8% !important; top: 38% !important; }
+  .icon-ae      { left: 8% !important; top: 50% !important; }
+
+  /* Logo ok.png */
+  .center-logo-favicon { width: 100px; height: 100px; }
+
+  /* Section about */
+  .about-layout { flex-direction: column; align-items: center; }
+
+  /* Videos : 1 par ligne */
+  .portfolio-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .vertical-grid  { grid-template-columns: 1fr !important; gap: 1rem !important; }
+
+  /* Icones logiciels plus petites */
+  .floating-icon { width: 28px; height: 28px; }
+}
