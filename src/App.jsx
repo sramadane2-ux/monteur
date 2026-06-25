@@ -2,7 +2,30 @@ import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './index.css';
 
-const OfferModal = ({ onClose }) => (
+const OfferModal = ({ onClose }) => {
+  const [showWaForm, setShowWaForm] = useState(false);
+  const [waNumber, setWaNumber] = useState('');
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const sendWhatsApp = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs.send(
+      'service_d5h8bvm',
+      'template_kaxw90y',
+      { user_name: 'Demande via Offre', user_whatsapp: waNumber, user_email: 'N/A', service: 'Pack Launchpad', message: `Demande de réservation Pack Launchpad. WhatsApp : ${waNumber}` },
+      'ZMeJ2XUlOOle2Bm8J'
+    ).then(() => {
+      setSent(true);
+      setLoading(false);
+    }).catch(() => {
+      setLoading(false);
+      alert("Erreur lors de l'envoi, réessayez.");
+    });
+  };
+
+  return (
   <div className="offer-overlay" onClick={onClose}>
     <div className="offer-modal" onClick={e => e.stopPropagation()}>
       <button className="offer-close" onClick={onClose}>✕</button>
@@ -61,10 +84,34 @@ const OfferModal = ({ onClose }) => (
         Places disponibles ce mois-ci : <strong>1 / 3</strong>
       </div>
 
-      <a href="#contact" className="offer-cta" onClick={onClose}>Réserver ma place →</a>
+      {/* CTA ou Mini-Form WhatsApp */}
+      {!showWaForm ? (
+        <button className="offer-cta" onClick={() => setShowWaForm(true)}>Réserver ma place →</button>
+      ) : sent ? (
+        <div className="offer-wa-success">
+          <span>✅</span>
+          <p>Reçu ! Je vous contacte sur WhatsApp sous 24h.</p>
+        </div>
+      ) : (
+        <form className="offer-wa-form" onSubmit={sendWhatsApp}>
+          <p className="offer-wa-desc">📱 Laissez votre numéro WhatsApp — je vous contacte personnellement sous 24h pour discuter de votre projet.</p>
+          <input
+            className="offer-wa-input"
+            type="tel"
+            placeholder="+33 6 00 00 00 00"
+            value={waNumber}
+            onChange={e => setWaNumber(e.target.value)}
+            required
+          />
+          <button className="offer-cta" type="submit" disabled={loading}>
+            {loading ? 'Envoi...' : 'Envoyer ma demande →'}
+          </button>
+        </form>
+      )}
     </div>
   </div>
-);
+  );
+};
 
 const VideoCard = ({ videoId, isEmpty, isVertical }) => {
   const [isPlaying, setIsPlaying] = useState(false);

@@ -1119,3 +1119,50 @@ textarea.form-input {
   transform: translateY(-2px);
   box-shadow: 0 12px 40px rgba(220,0,212,0.55);
 }
+.offer-cta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── WhatsApp Mini Form ── */
+.offer-wa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  animation: slideUp 0.3s ease;
+}
+.offer-wa-desc {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.4;
+}
+.offer-wa-input {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(220, 0, 212, 0.3);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.offer-wa-input::placeholder { color: rgba(255,255,255,0.25); }
+.offer-wa-input:focus {
+  border-color: rgba(220, 0, 212, 0.7);
+  box-shadow: 0 0 0 3px rgba(220, 0, 212, 0.1);
+}
+.offer-wa-success {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(0,200,80,0.08);
+  border: 1px solid rgba(0,200,80,0.25);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  animation: slideUp 0.3s ease;
+}
+.offer-wa-success span { font-size: 1.3rem; }
