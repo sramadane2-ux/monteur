@@ -626,7 +626,7 @@ a {
   width: 150px;
   height: 150px;
   object-fit: contain;
-  filter: drop-shadow(0 0 50px var(--violet-glow));
+  filter: drop-shadow(0 0 80px var(--violet-glow));
 }
 .center-logo-inner {
   width: 60px;
