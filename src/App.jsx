@@ -28,7 +28,7 @@ const VideoCard = ({ videoId, isEmpty, isVertical }) => {
           className="video-overlay" 
           onClick={() => setIsPlaying(true)}
           style={{
-            backgroundImage: `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)`,
+            backgroundImage: `url(https://img.youtube.com/vi/${videoId}/${isVertical ? 'hqdefault' : 'maxresdefault'}.jpg)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
