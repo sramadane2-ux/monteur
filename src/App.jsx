@@ -246,7 +246,7 @@ function App() {
           </div>
           <div className="about-content">
               <p className="about-text">
-                Je suis <strong className="about-name">Dhane</strong>, monteur vidéo et motion designer spécialisé dans la création de contenu pour les réseaux sociaux. Mon approche s'inspire des standards visuels les plus élevés de l'industrie — un style épuré, impactant et pensé pour convertir.
+                Je suis <strong className="about-name">Dhane</strong>, monteur vidéo et motion designer spécialisé dans la création de contenu pour les réseaux sociaux. Mon approche s'inspire des standards visuels les plus élevés de l'industrie (<strong>style Iman Gadzhi</strong>) — un montage épuré, impactant et pensé pour convertir. J'accompagne les infopreneurs et les <strong>créateurs de SaaS</strong> pour transformer leurs vidéos en véritables aimants à clients.
               </p>
 
 
