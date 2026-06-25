@@ -7,7 +7,7 @@ const OfferModal = ({ onClose }) => (
     <div className="offer-modal" onClick={e => e.stopPropagation()}>
       <button className="offer-close" onClick={onClose}>✕</button>
 
-      <div className="offer-badge">2 PLACES / MOIS</div>
+      <div className="offer-badge">3 PLACES / MOIS</div>
 
       <h2 className="offer-title">Le Pack <span>Launchpad</span></h2>
       <p className="offer-promise">Tout ce qui est inclus dans votre pack, et ce que ça vous coûterait si vous le commandiez séparément :</p>
@@ -57,7 +57,7 @@ const OfferModal = ({ onClose }) => (
 
       <div className="offer-scarcity">
         <span className="offer-dot-red"></span>
-        Places disponibles ce mois-ci : <strong>1 / 2</strong>
+        Places disponibles ce mois-ci : <strong>1 / 3</strong>
       </div>
 
       <a href="#contact" className="offer-cta" onClick={onClose}>Réserver ma place →</a>
