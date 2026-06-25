@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './index.css';
 
-const OfferModal = ({ onClose }) => {
-  const [showWaForm, setShowWaForm] = useState(false);
+const WhatsAppMiniModal = ({ onClose }) => {
   const [waNumber, setWaNumber] = useState('');
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -14,7 +13,7 @@ const OfferModal = ({ onClose }) => {
     emailjs.send(
       'service_d5h8bvm',
       'template_kaxw90y',
-      { user_name: 'Demande via Offre', user_whatsapp: waNumber, user_email: 'N/A', service: 'Pack Launchpad', message: `Demande de réservation Pack Launchpad. WhatsApp : ${waNumber}` },
+      { user_name: 'Réservation Offre', user_whatsapp: waNumber, user_email: 'N/A', service: 'Pack Launchpad', message: `Réservation Pack Launchpad. WhatsApp : ${waNumber}` },
       'ZMeJ2XUlOOle2Bm8J'
     ).then(() => {
       setSent(true);
@@ -26,8 +25,47 @@ const OfferModal = ({ onClose }) => {
   };
 
   return (
-  <div className="offer-overlay" onClick={onClose}>
-    <div className="offer-modal" onClick={e => e.stopPropagation()}>
+    <div className="wa-mini-overlay" onClick={onClose}>
+      <div className="wa-mini-card" onClick={e => e.stopPropagation()}>
+        <button className="offer-close" onClick={onClose}>✕</button>
+        {sent ? (
+          <div className="offer-wa-success">
+            <span>✅</span>
+            <p>Reçu ! Je vous contacte sur WhatsApp sous 24h.</p>
+          </div>
+        ) : (
+          <>
+            <div className="wa-mini-icon">📱</div>
+            <h3 className="wa-mini-title">Réserver ma place</h3>
+            <p className="wa-mini-desc">Laissez votre numéro WhatsApp. Je vous contacte personnellement sous 24h pour discuter de votre projet.</p>
+            <form className="wa-mini-form" onSubmit={sendWhatsApp}>
+              <input
+                className="offer-wa-input"
+                type="tel"
+                placeholder="+33 6 00 00 00 00"
+                value={waNumber}
+                onChange={e => setWaNumber(e.target.value)}
+                required
+              />
+              <button className="offer-cta" type="submit" disabled={loading}>
+                {loading ? 'Envoi...' : 'Envoyer ma demande →'}
+              </button>
+            </form>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+const OfferModal = ({ onClose }) => {
+  const [showWaMini, setShowWaMini] = useState(false);
+
+  return (
+  <>
+    {showWaMini && <WhatsAppMiniModal onClose={() => setShowWaMini(false)} />}
+    <div className="offer-overlay" onClick={onClose}>
+      <div className="offer-modal" onClick={e => e.stopPropagation()}>
       <button className="offer-close" onClick={onClose}>✕</button>
 
       <div className="offer-badge">3 PLACES / MOIS</div>
@@ -84,32 +122,11 @@ const OfferModal = ({ onClose }) => {
         Places disponibles ce mois-ci : <strong>1 / 3</strong>
       </div>
 
-      {/* CTA ou Mini-Form WhatsApp */}
-      {!showWaForm ? (
-        <button className="offer-cta" onClick={() => setShowWaForm(true)}>Réserver ma place →</button>
-      ) : sent ? (
-        <div className="offer-wa-success">
-          <span>✅</span>
-          <p>Reçu ! Je vous contacte sur WhatsApp sous 24h.</p>
-        </div>
-      ) : (
-        <form className="offer-wa-form" onSubmit={sendWhatsApp}>
-          <p className="offer-wa-desc">📱 Laissez votre numéro WhatsApp — je vous contacte personnellement sous 24h pour discuter de votre projet.</p>
-          <input
-            className="offer-wa-input"
-            type="tel"
-            placeholder="+33 6 00 00 00 00"
-            value={waNumber}
-            onChange={e => setWaNumber(e.target.value)}
-            required
-          />
-          <button className="offer-cta" type="submit" disabled={loading}>
-            {loading ? 'Envoi...' : 'Envoyer ma demande →'}
-          </button>
-        </form>
-      )}
+      {/* CTA */}
+      <button className="offer-cta" onClick={() => setShowWaMini(true)}>Réserver ma place →</button>
     </div>
   </div>
+  </>
   );
 };
 
