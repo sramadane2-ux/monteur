@@ -63,6 +63,8 @@ a {
 .nav-left, .nav-right {
   display: flex;
   flex: 1;
+  align-items: center;
+  gap: 1rem;
 }
 
 .nav-right {
@@ -825,7 +827,6 @@ textarea.form-input {
 
 /* ── OFFER BUTTON ── */
 .btn-offer {
-  margin-left: auto;
   background: linear-gradient(135deg, rgba(220, 0, 212, 0.15), rgba(220, 0, 212, 0.05));
   border: 1px solid rgba(220, 0, 212, 0.6);
   color: #fff;
