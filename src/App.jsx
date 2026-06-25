@@ -312,7 +312,7 @@ function App() {
                   <option value="">Sélectionner...</option>
                   <option value="short">Short ou Reel</option>
                   <option value="long">Vidéo long format</option>
-                  <option value="saas">Video explainer SaaS</option>
+                  <option value="saas">SaaS Explainer Video</option>
                 </select>
               </div>
             </div>
