@@ -78,7 +78,7 @@ const OfferModal = ({ onClose }) => {
 
       <ul className="offer-value-list">
         <li>
-          <span className="offer-item-name"><span className="offer-star">✦</span> Développement de la Mini-App Web</span>
+          <span className="offer-item-name"><span className="offer-star">✦</span> Développement de la Mini-App Web + Intégration IA</span>
           <span className="offer-item-price">~3 500 €</span>
         </li>
         <li>
@@ -109,13 +109,7 @@ const OfferModal = ({ onClose }) => {
 
       <div className="offer-divider" />
 
-      <div className="offer-guarantee">
-        <span className="offer-shield">🛡</span>
-        <div>
-          <strong>Garantie Étape par Étape</strong>
-          <p>Si le premier jet ne vous convainc pas, on s'arrête là. Vous ne payez rien.</p>
-        </div>
-      </div>
+
 
       <div className="offer-scarcity">
         <span className="offer-dot-red"></span>
@@ -337,7 +331,7 @@ function App() {
           <div className="reels-header" style={{ marginTop: '5rem', marginBottom: '3rem', textAlign: 'center', position: 'relative' }}>
             <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', marginBottom: 0 }}>
               <span className="hero-main-text">LONG <span className="ampersand">FORMAT</span></span>
-              <span className="handwritten-annotation" style={{ top: '48%', left: '70%', fontSize: 'clamp(1rem, 3.5vw, 2.5rem)' }}>Style Iman Gadzhi</span>
+              <span className="handwritten-annotation" style={{ top: '48%', left: '70%' }}>Style Iman Gadzhi</span>
             </h2>
             <p className="section-sub">YOUTUBE</p>
           </div>
