@@ -500,7 +500,7 @@ function App() {
         </div>
         <div className="footer-bottom">
           <span>© Copyright 2026. Tous droits réservés</span>
-          <span>Créé par Dhane</span>
+          <span>Créé par moi-même • Depuis le Togo avec ❤️</span>
         </div>
       </footer>
 
