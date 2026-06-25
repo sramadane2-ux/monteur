@@ -29,7 +29,7 @@ const OfferModal = ({ onClose }) => (
         </li>
         <li>
           <span className="offer-item-name">✦ Vidéo VSL 2</span>
-          <span className="offer-item-price">~200 €</span>
+          <span className="offer-item-price">~300 $</span>
         </li>
       </ul>
 
