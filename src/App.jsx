@@ -246,7 +246,7 @@ function App() {
           </div>
           <div className="about-content">
               <p className="about-text">
-                Je suis <strong className="about-name">Dhane</strong>, monteur vidéo, motion designer et <strong>moi-même créateur de SaaS</strong>. Mon approche s'inspire des standards visuels les plus élevés de l'industrie (<strong>style Iman Gadzhi</strong>) — un montage épuré, impactant et pensé pour convertir. Plus qu'un simple prestataire, je me positionne comme un véritable <strong>partenaire business</strong> pour les infopreneurs et les créateurs de logiciels, afin de transformer leurs vidéos en puissants leviers d'acquisition.
+                Je suis <strong className="about-name">Dhane</strong> : monteur vidéo, motion designer et créateur de SaaS. J'applique les standards visuels les plus élevés de l'industrie (<strong>style Iman Gadzhi</strong>) avec des montages épurés, impactants et pensés pour convertir. Plus qu'un simple prestataire, je suis un véritable <strong>partenaire business</strong>. Mon but ? Aider les infopreneurs et les créateurs de logiciels à transformer leurs vidéos en leviers d'acquisition massifs.
               </p>
 
 
