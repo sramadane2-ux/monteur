@@ -619,7 +619,7 @@ a {
 .center-logo {
   display: flex;
   justify-content: center;
-  margin: 4rem 0;
+  margin: 1.5rem 0;
 }
 
 .center-logo-favicon {
