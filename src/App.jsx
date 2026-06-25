@@ -42,7 +42,7 @@ const OfferModal = ({ onClose }) => (
 
       <div className="offer-invest-row">
         <span>Votre investissement unique</span>
-        <span className="offer-invest-price">X XXX €</span>
+        <span className="offer-invest-price">1 997 €</span>
       </div>
 
       <div className="offer-divider" />
