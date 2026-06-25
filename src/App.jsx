@@ -15,10 +15,10 @@ const OfferModal = ({ onClose }) => (
       <div className="offer-divider" />
 
       <ul className="offer-list">
-        <li><span className="offer-check">✦</span><div><strong>Vidéo Explainer SaaS Premium</strong><br /><span>Style Iman Gadzhi — montage épuré, impactant, optimisé conversion</span></div></li>
-        <li><span className="offer-check">✦</span><div><strong>Fichiers sources structurés</strong><br /><span>Réutilisables, documentés, livrés avec le projet</span></div></li>
-        <li><span className="offer-check">✦</span><div><strong>Session consulting stratégique 30 min</strong><br /><span>On analyse ensemble le positionnement de votre SaaS</span></div></li>
-        <li><span className="offer-check">✦</span><div><strong>Zéro intermédiaire</strong><br /><span>Je gère le motion design, la vidéo et la stratégie. Vous gérez votre business.</span></div></li>
+        <li><span className="offer-check">✦</span><div><strong>Vidéo Explainer SaaS Premium</strong><span>Style Iman Gadzhi — montage épuré, impactant, optimisé conversion</span></div></li>
+        <li><span className="offer-check">✦</span><div><strong>Fichiers sources structurés</strong><span>Réutilisables, documentés, livrés avec le projet</span></div></li>
+        <li><span className="offer-check">✦</span><div><strong>Session consulting stratégique 30 min</strong><span>On analyse ensemble le positionnement de votre SaaS</span></div></li>
+        <li><span className="offer-check">✦</span><div><strong>Zéro intermédiaire</strong><span>Je gère le motion design, la vidéo et la stratégie. Vous gérez votre business.</span></div></li>
       </ul>
 
       <div className="offer-divider" />
