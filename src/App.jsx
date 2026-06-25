@@ -205,10 +205,10 @@ function App() {
 
           {/* Nouvelle section REELS REMAKES */}
           <div className="reels-header" style={{ marginTop: '8rem', marginBottom: '3rem', textAlign: 'center' }}>
-            <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}>
+            <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', marginBottom: 0 }}>
               <span className="hero-main-text">REELS <span className="ampersand">&</span> SHORTS</span>
             </h2>
-            <p className="hero-sub" style={{ marginTop: '0.5rem', color: 'var(--violet)', opacity: 1, letterSpacing: '0.2em', fontWeight: 600 }}>REMAKES</p>
+            <p className="section-sub">REMAKES</p>
           </div>
 
           <div className="portfolio-grid">
@@ -219,10 +219,10 @@ function App() {
 
           {/* Nouvelle section VRAIS REELS 9:16 */}
           <div className="reels-header" style={{ marginTop: '8rem', marginBottom: '3rem', textAlign: 'center' }}>
-            <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}>
+            <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', marginBottom: 0 }}>
               <span className="hero-main-text">MES <span className="ampersand">CRÉATIONS</span></span>
             </h2>
-            <p className="hero-sub" style={{ marginTop: '0.5rem', color: 'var(--violet)', opacity: 1, letterSpacing: '0.2em', fontWeight: 600 }}>SHORTS</p>
+            <p className="section-sub">SHORTS</p>
           </div>
 
           <div className="portfolio-grid vertical-grid">
@@ -235,10 +235,10 @@ function App() {
         <section id="about" className="section">
           <div className="about-header">
             <div>
-              <h2 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', marginBottom: '0.3rem' }}>
+              <h2 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', marginBottom: 0 }}>
                 <span className="hero-main-text">À PROPOS</span>
               </h2>
-              <p className="hero-sub" style={{ color: 'var(--violet)', opacity: 1, letterSpacing: '0.2em', fontWeight: 600, fontSize: '1rem' }}>DE MOI</p>
+              <p className="section-sub">DE MOI</p>
             </div>
             <div className="about-photo-wrapper">
               <img src="/dhane.png" alt="Dhane" className="about-photo-img" />

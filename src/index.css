@@ -336,6 +336,17 @@ a {
   scroll-margin-top: 100px;
 }
 
+.section-sub {
+  font-size: 0.85rem;
+  color: var(--violet);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+  display: block;
+}
+
 .color-ae { color: #D998FF; font-weight: 500; }
 .color-pr { color: #9999FF; font-weight: 500; }
 .color-blender { color: #ea7600; font-weight: 500; }
