@@ -134,8 +134,8 @@ const VideoCard = ({ videoId, isEmpty, isVertical }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const embedUrl = isVertical
-    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=${videoId}`
-    : `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=${videoId}&vq=hd1080&hd=1`
+    : `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&vq=hd1080&hd=1`;
 
   return (
     <div 
