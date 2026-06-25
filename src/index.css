@@ -955,7 +955,7 @@ textarea.form-input {
   font-family: var(--font-heading);
   font-size: clamp(1.8rem, 5vw, 2.6rem);
   line-height: 1;
-  color: #fff;
+  color: rgba(255,255,255,0.35);
   margin-bottom: 0.5rem;
 }
 .offer-title span {
