@@ -876,9 +876,9 @@ textarea.form-input {
   -webkit-backdrop-filter: blur(40px);
   border: 1px solid rgba(220, 0, 212, 0.25);
   border-radius: 24px;
-  max-width: 560px;
+  max-width: 540px;
   width: 100%;
-  padding: 2.5rem 2rem;
+  padding: 2rem 2.2rem;
   box-shadow:
     0 0 60px rgba(220, 0, 212, 0.15),
     0 30px 80px rgba(0,0,0,0.5),
@@ -934,21 +934,21 @@ textarea.form-input {
   background: rgba(220, 0, 212, 0.15);
   border: 1px solid rgba(220, 0, 212, 0.4);
   color: var(--violet);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 0.3rem 0.9rem;
+  padding: 0.25rem 0.85rem;
   border-radius: 100px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .offer-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
   line-height: 1;
   color: #fff;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 .offer-title span {
   color: var(--violet);
@@ -957,15 +957,15 @@ textarea.form-input {
 
 .offer-promise {
   color: rgba(255,255,255,0.65);
-  font-size: 0.85rem;
-  line-height: 1.25;
-  margin-bottom: 1rem;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  margin-bottom: 0.9rem;
 }
 
 .offer-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(220,0,212,0.3), transparent);
-  margin: 1rem 0;
+  margin: 0.8rem 0;
 }
 
 /* Value stacking list */
@@ -973,7 +973,7 @@ textarea.form-input {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
+  gap: 0.45rem;
 }
 .offer-value-list li {
   display: flex;
@@ -997,8 +997,8 @@ textarea.form-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0 0.3rem;
-  font-size: 0.85rem;
+  padding: 0.2rem 0 0.1rem;
+  font-size: 0.8rem;
   color: rgba(255,255,255,0.5);
 }
 .offer-total-strike {
@@ -1011,13 +1011,13 @@ textarea.form-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0 0.3rem;
-  font-size: 0.95rem;
+  padding: 0.2rem 0 0.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
 }
 .offer-invest-price {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: var(--font-heading);
   color: var(--violet);
   letter-spacing: 0.05em;
@@ -1057,24 +1057,24 @@ textarea.form-input {
 .offer-guarantee {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 0.8rem;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
-  padding: 1rem 1.2rem;
-  margin-bottom: 1rem;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.8rem;
 }
-.offer-shield { font-size: 1.5rem; flex-shrink: 0; }
-.offer-guarantee strong { color: #fff; font-size: 0.85rem; display: block; margin-bottom: 0.2rem; }
-.offer-guarantee p { color: rgba(255,255,255,0.5); font-size: 0.75rem; line-height: 1.2; }
+.offer-shield { font-size: 1.3rem; flex-shrink: 0; }
+.offer-guarantee strong { color: #fff; font-size: 0.83rem; display: block; margin-bottom: 0.15rem; }
+.offer-guarantee p { color: rgba(255,255,255,0.5); font-size: 0.74rem; line-height: 1.2; }
 
 .offer-scarcity {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.8rem;
+  font-size: 0.77rem;
   color: rgba(255,255,255,0.5);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 .offer-dot-red {
   width: 8px;
