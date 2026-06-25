@@ -1234,3 +1234,54 @@ textarea.form-input {
   gap: 0.75rem;
 }
 
+/* ── MOBILE FIXES ── */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 0.5rem;
+  }
+  .nav-left, .nav-right {
+    display: none; /* Hide empty spacers on mobile to give full width to links */
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  .btn-contact, .btn-offer {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+  }
+  .header-logo {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .vertical-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .handwritten-annotation {
+    font-size: clamp(0.9rem, 4vw, 1.2rem) !important;
+    margin-top: 10px;
+    left: auto !important;
+    right: 0 !important;
+    transform: rotate(-12deg);
+  }
+  
+  .center-logo-favicon {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .icon-blender { left: 2% !important; top: 5% !important; }
+  .icon-vscode { right: 2% !important; top: 10% !important; }
+  .icon-pr { right: 2% !important; top: 35% !important; }
+  .icon-ae { left: 2% !important; top: 45% !important; }
+}
