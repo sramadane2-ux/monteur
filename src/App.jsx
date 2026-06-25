@@ -10,7 +10,7 @@ const OfferModal = ({ onClose }) => (
       <div className="offer-badge">2 PLACES / MOIS</div>
 
       <h2 className="offer-title">Le Pack <span>Launchpad</span></h2>
-      <p className="offer-promise">Pour que le prix vous paraisse dérisoire, voici la valeur réelle de chaque élément inclus dans votre pack :</p>
+      <p className="offer-promise">Tout ce qui est inclus dans votre pack, et ce que ça vous coûterait si vous le commandiez séparément :</p>
 
       <div className="offer-divider" />
 
