@@ -992,6 +992,11 @@ textarea.form-input {
   text-decoration: line-through;
 }
 
+.offer-star {
+  color: var(--violet);
+  text-shadow: 0 0 8px rgba(220, 0, 212, 0.9), 0 0 20px rgba(220, 0, 212, 0.5);
+}
+
 /* Total & Investment rows */
 .offer-total-row {
   display: flex;

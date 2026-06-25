@@ -16,19 +16,19 @@ const OfferModal = ({ onClose }) => (
 
       <ul className="offer-value-list">
         <li>
-          <span className="offer-item-name">✦ Développement de la Mini-App Web</span>
+          <span className="offer-item-name"><span className="offer-star">✦</span> Développement de la Mini-App Web</span>
           <span className="offer-item-price">~3 500 €</span>
         </li>
         <li>
-          <span className="offer-item-name">✦ Vidéo Explainer Motion Design Premium</span>
+          <span className="offer-item-name"><span className="offer-star">✦</span> Vidéo Explainer Motion Design Premium</span>
           <span className="offer-item-price">~1 500 €</span>
         </li>
         <li>
-          <span className="offer-item-name">✦ Landing Page optimisée & Config. Domaine</span>
+          <span className="offer-item-name"><span className="offer-star">✦</span> Landing Page optimisée & Config. Domaine</span>
           <span className="offer-item-price">~800 €</span>
         </li>
         <li>
-          <span className="offer-item-name">✦ Vidéo VSL 2</span>
+          <span className="offer-item-name"><span className="offer-star">✦</span> Vidéo VSL 2</span>
           <span className="offer-item-price">~300 $</span>
         </li>
       </ul>
