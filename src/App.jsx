@@ -244,10 +244,6 @@ function App() {
                 Bonjour ! Sur les réseaux sociaux, on m'appelle <strong className="about-name">Dhane</strong>. En tant que monteur vidéo et motion designer, je combine le montage dynamique et la 3D pour aider les créateurs à raconter des histoires captivantes.
               </p>
 
-              <div className="experience">
-                <span className="exp-num">01</span>
-                <span className="exp-text">An d'expérience</span>
-              </div>
 
               <p className="about-contact">
                 <strong>Email :</strong> <span>sramadane2@gmail.com</span>
