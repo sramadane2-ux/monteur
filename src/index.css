@@ -1261,7 +1261,7 @@ textarea.form-input {
     transform: translateY(-50%);
   }
   .hero-sub { margin-top: 2rem; font-size: 0.9rem; text-align: center; }
-  .handwritten-annotation { font-size: 1.1rem; white-space: nowrap; }
+  .handwritten-annotation { font-size: 2.5rem; white-space: nowrap; top: -52px !important; left: 50% !important; transform: translateX(-50%) rotate(-6deg) !important; }
 
   /* Icones vers les bords */
   .icon-blender { left: 8% !important; top: 5% !important; }
