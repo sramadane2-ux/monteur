@@ -418,7 +418,7 @@ function App() {
             </div>
           </div>
           <div className="center-logo">
-            <img src="/favicon-96x96.png" alt="Logo" className="center-logo-favicon" />
+            <img src="/ok.png" alt="Logo" className="center-logo-favicon" />
           </div>
         </section>
 
