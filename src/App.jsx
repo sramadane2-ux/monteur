@@ -72,10 +72,14 @@ function App() {
 
   // IDs YouTube pour la section des vrais Reels (format vertical 9:16)
   const trueReels = [
-    null, // Vrai Reel 1
-    null, // Vrai Reel 2
-    null, // Vrai Reel 3
-    null  // Vrai Reel 4
+    'IezLp5t-JG0',
+    'luaED-izJg0',
+    'aClgznyuSnw',
+    'YCkG709ZM_g',
+    '4DOd5GpewHM',
+    'YP-ZX6dS7R8',
+    'rQ1zWSFOcsc',
+    '6RGGnC-IEx8'
   ];
 
   const sendEmail = (e) => {
@@ -209,9 +213,9 @@ function App() {
           {/* Nouvelle section VRAIS REELS 9:16 */}
           <div className="reels-header" style={{ marginTop: '8rem', marginBottom: '3rem', textAlign: 'center' }}>
             <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}>
-              <span className="hero-main-text">VRAIS <span className="ampersand">REELS</span></span>
+              <span className="hero-main-text">MES <span className="ampersand">CRÉATIONS</span></span>
             </h2>
-            <p className="hero-sub" style={{ marginTop: '0.5rem', color: 'var(--violet)', opacity: 1, letterSpacing: '0.2em', fontWeight: 600 }}>PROJETS RÉALISÉS</p>
+            <p className="hero-sub" style={{ marginTop: '0.5rem', color: 'var(--violet)', opacity: 1, letterSpacing: '0.2em', fontWeight: 600 }}>SHORTS</p>
           </div>
 
           <div className="portfolio-grid vertical-grid">
