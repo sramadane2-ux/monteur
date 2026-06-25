@@ -241,7 +241,7 @@ function App() {
           </div>
           <div className="about-content">
               <p className="about-text">
-                Bonjour ! Sur les réseaux sociaux, on m'appelle <strong className="about-name">Dhane</strong>. En tant que monteur vidéo et motion designer, je combine le montage dynamique et la 3D pour aider les créateurs à raconter des histoires captivantes.
+                Je suis <strong className="about-name">Dhane</strong>, monteur vidéo et motion designer spécialisé dans la création de contenu pour les réseaux sociaux. Mon approche s'inspire des standards visuels les plus élevés de l'industrie — un style épuré, impactant et pensé pour convertir. Je travaille exclusivement avec des <strong>créateurs de contenu</strong> et des <strong>infopreneurs</strong> qui veulent que chaque vidéo reflète leur autorité et capte l'attention dès les premières secondes.
               </p>
 
 
