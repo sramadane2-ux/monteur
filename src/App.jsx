@@ -10,7 +10,10 @@ const VideoCard = ({ videoId, isEmpty, isVertical }) => {
     : `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
 
   return (
-    <div className="portfolio-item" style={{ paddingBottom: isVertical ? '177.77%' : '56.25%' }}>
+    <div 
+      className="portfolio-item" 
+      style={{ paddingBottom: isVertical ? '177.77%' : '56.25%' }}
+    >
       {isPlaying && !isEmpty ? (
         <iframe
           className="portfolio-video"
@@ -76,14 +79,7 @@ function App() {
 
   // IDs YouTube pour la section des vrais Reels (format vertical 9:16)
   const trueReels = [
-    'IezLp5t-JG0',
-    'luaED-izJg0',
-    'aClgznyuSnw',
-    'YCkG709ZM_g',
-    '4DOd5GpewHM',
-    'YP-ZX6dS7R8',
-    'rQ1zWSFOcsc',
-    '6RGGnC-IEx8'
+    'IezLp5t-JG0'
   ];
 
   const sendEmail = (e) => {
