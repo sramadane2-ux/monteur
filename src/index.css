@@ -1234,37 +1234,3 @@ textarea.form-input {
   gap: 0.75rem;
 }
 
-/* ── MOBILE FIXES ── */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1rem 0.5rem;
-  }
-  .nav-left, .nav-right {
-    display: none;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    width: 100%;
-    justify-content: center;
-  }
-  .nav-links a {
-    font-size: 0.75rem;
-  }
-  .header-logo {
-    width: 25px;
-    height: 25px;
-  }
-  .btn-contact, .btn-offer {
-    padding: 0.3rem 0.7rem;
-    font-size: 0.7rem;
-  }
-  .center-logo-favicon {
-    width: 100px;
-    height: 100px;
-  }
-  .icon-blender { left: 2%; top: 5%; }
-  .icon-vscode { right: 2%; top: 10%; }
-  .icon-pr { right: 2%; top: 35%; }
-  .icon-ae { left: 2%; top: 45%; }
-}
