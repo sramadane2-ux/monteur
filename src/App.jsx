@@ -8,6 +8,7 @@ const OfferModal = ({ onClose }) => (
       <button className="offer-close" onClick={onClose}>✕</button>
 
       <div className="offer-badge">3 PLACES / MOIS</div>
+      <p className="offer-exclusivity">Je n'accepte que 3 clients par mois.</p>
 
       <h2 className="offer-title">Le Pack <span>Launchpad</span></h2>
       <p className="offer-promise">Tout ce qui est inclus dans votre pack, et ce que ça vous coûterait si vous le commandiez séparément :</p>

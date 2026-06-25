@@ -943,6 +943,14 @@ textarea.form-input {
   margin-bottom: 1rem;
 }
 
+.offer-exclusivity {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+}
+
 .offer-title {
   font-family: var(--font-heading);
   font-size: clamp(1.8rem, 5vw, 2.6rem);
