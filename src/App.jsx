@@ -235,10 +235,10 @@ function App() {
         <section id="about" className="section">
           <div className="about-header">
             <div>
-              <h2 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', marginBottom: 0 }}>
+              <h2 className="hero-title" style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', marginBottom: 0 }}>
                 <span className="hero-main-text">À PROPOS</span>
               </h2>
-              <p className="section-sub">DE MOI</p>
+              <p className="section-sub" style={{ fontSize: '0.7rem' }}>DE MOI</p>
             </div>
             <div className="about-photo-wrapper">
               <img src="/dhane.png" alt="Dhane" className="about-photo-img" />
@@ -278,10 +278,10 @@ function App() {
 
         <section id="contact" className="section">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <h2 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', marginBottom: '0.3rem' }}>
+            <h2 className="hero-title" style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', marginBottom: '0.3rem' }}>
               <span className="hero-main-text">TRAVAILLONS</span>
             </h2>
-            <p className="hero-sub" style={{ color: 'var(--violet)', opacity: 1, letterSpacing: '0.2em', fontWeight: 600, fontSize: '1rem' }}>ENSEMBLE</p>
+            <p className="section-sub" style={{ fontSize: '0.7rem' }}>ENSEMBLE</p>
           </div>
           <p className="contact-desc">
             Créons quelque chose d'inoubliable, du concept au montage final. Grâce au motion design, aux transitions fluides et au storytelling créatif, je donne vie à votre vision.
