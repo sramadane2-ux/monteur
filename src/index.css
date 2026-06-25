@@ -1243,6 +1243,7 @@ textarea.form-input {
     display: none;
   }
   .nav-links {
+    flex-wrap: wrap;
     gap: 0.5rem;
     width: 100%;
     justify-content: center;
