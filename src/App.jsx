@@ -339,7 +339,7 @@ function App() {
           <div className="reels-header" style={{ marginTop: '5rem', marginBottom: '3rem', textAlign: 'center', position: 'relative' }}>
             <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', marginBottom: 0 }}>
               <span className="hero-main-text">LONG <span className="ampersand">FORMAT</span></span>
-              <span className="handwritten-annotation" style={{ top: '60%', left: '60%', fontSize: 'clamp(1rem, 3.5vw, 2.5rem)' }}>Style Iman Gadzhi</span>
+              <span className="handwritten-annotation" style={{ top: '10%', left: '60%', fontSize: 'clamp(1rem, 3.5vw, 2.5rem)' }}>Style Iman Gadzhi</span>
             </h2>
             <p className="section-sub">YOUTUBE</p>
           </div>
