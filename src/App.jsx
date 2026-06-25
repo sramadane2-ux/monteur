@@ -2,6 +2,45 @@ import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './index.css';
 
+const OfferModal = ({ onClose }) => (
+  <div className="offer-overlay" onClick={onClose}>
+    <div className="offer-modal" onClick={e => e.stopPropagation()}>
+      <button className="offer-close" onClick={onClose}>✕</button>
+
+      <div className="offer-badge">2 PLACES / MOIS</div>
+
+      <h2 className="offer-title">Le Pack<br /><span>SaaS Acquisition</span></h2>
+      <p className="offer-promise">En 14 jours, sans aucun effort de votre part, je transforme votre idée en un SaaS fonctionnel avec sa vidéo explainer premium — pensé pour convertir dès le premier regard.</p>
+
+      <div className="offer-divider" />
+
+      <ul className="offer-list">
+        <li><span className="offer-check">✦</span><div><strong>Vidéo Explainer SaaS Premium</strong><br /><span>Style Iman Gadzhi — montage épuré, impactant, optimisé conversion</span></div></li>
+        <li><span className="offer-check">✦</span><div><strong>Fichiers sources structurés</strong><br /><span>Réutilisables, documentés, livrés avec le projet</span></div></li>
+        <li><span className="offer-check">✦</span><div><strong>Session consulting stratégique 30 min</strong><br /><span>On analyse ensemble le positionnement de votre SaaS</span></div></li>
+        <li><span className="offer-check">✦</span><div><strong>Zéro intermédiaire</strong><br /><span>Je gère le motion design, la vidéo et la stratégie. Vous gérez votre business.</span></div></li>
+      </ul>
+
+      <div className="offer-divider" />
+
+      <div className="offer-guarantee">
+        <span className="offer-shield">🛡</span>
+        <div>
+          <strong>Garantie Étape par Étape</strong>
+          <p>Si le premier jet ne vous convainc pas, on s'arrête là. Vous ne payez rien.</p>
+        </div>
+      </div>
+
+      <div className="offer-scarcity">
+        <span className="offer-dot-red"></span>
+        Places disponibles ce mois-ci : <strong>1 / 2</strong>
+      </div>
+
+      <a href="#contact" className="offer-cta" onClick={onClose}>Réserver ma place →</a>
+    </div>
+  </div>
+);
+
 const VideoCard = ({ videoId, isEmpty, isVertical }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -116,8 +155,12 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [offerOpen, setOfferOpen] = useState(false);
+
   return (
     <>
+      {offerOpen && <OfferModal onClose={() => setOfferOpen(false)} />}
+
       <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
         <img src="/favicon-96x96.png" alt="Logo" className="header-logo" />
         <div className={`nav-links ${scrolled ? 'nav-links--hidden' : ''}`}>
@@ -126,6 +169,7 @@ function App() {
           <a href="#work">Mes Projets</a>
           <a href="#contact" className="btn-contact">Contact</a>
         </div>
+        <button className="btn-offer" onClick={() => setOfferOpen(true)}>✦ Mon Offre</button>
       </nav>
 
       <div className={`availability ${scrolled ? 'availability--floating' : ''}`}>
