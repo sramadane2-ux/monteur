@@ -288,29 +288,33 @@ function App() {
           </p>
 
           <form className="form" id="contact-form" onSubmit={sendEmail}>
-            <div className="form-group">
-              <label>Nom de la chaîne</label>
-              <input type="text" name="user_name" className="form-input" placeholder="Nom de votre chaîne" required />
-            </div>
-            
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" name="user_email" className="form-input" placeholder="sramadane2@gmail.com" required />
-            </div>
-
-            <div className="form-group">
-              <label>WhatsApp</label>
-              <input type="tel" name="user_whatsapp" className="form-input" placeholder="+33 6 00 00 00 00" required />
+            <div className="form-row">
+              <div className="form-group">
+                <label>Nom de la chaîne</label>
+                <input type="text" name="user_name" className="form-input" placeholder="Nom de votre chaîne" required />
+              </div>
+              
+              <div className="form-group">
+                <label>Email</label>
+                <input type="email" name="user_email" className="form-input" placeholder="sramadane2@gmail.com" required />
+              </div>
             </div>
 
-            <div className="form-group">
-              <label>Service souhaité ?</label>
-              <select name="service" className="form-input" required>
-                <option value="">Sélectionner...</option>
-                <option value="short">Short ou Reel</option>
-                <option value="long">Vidéo long format</option>
-                <option value="motion">Motion Design</option>
-              </select>
+            <div className="form-row">
+              <div className="form-group">
+                <label>WhatsApp</label>
+                <input type="tel" name="user_whatsapp" className="form-input" placeholder="+33 6 00 00 00 00" required />
+              </div>
+
+              <div className="form-group">
+                <label>Service souhaité ?</label>
+                <select name="service" className="form-input" required>
+                  <option value="">Sélectionner...</option>
+                  <option value="short">Short ou Reel</option>
+                  <option value="long">Vidéo long format</option>
+                  <option value="motion">Motion Design</option>
+                </select>
+              </div>
             </div>
 
             <div className="form-group">
