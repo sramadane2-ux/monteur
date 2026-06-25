@@ -28,7 +28,7 @@ const OfferModal = ({ onClose }) => (
           <span className="offer-item-price">~800 €</span>
         </li>
         <li>
-          <span className="offer-item-name">✦ Pack de 3 Miniatures Haute Conversion</span>
+          <span className="offer-item-name">✦ Vidéo VSL 2</span>
           <span className="offer-item-price">~200 €</span>
         </li>
       </ul>
