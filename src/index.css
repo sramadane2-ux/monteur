@@ -51,13 +51,22 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
-  padding: 2rem;
+  padding: 1.2rem 2.5rem;
   font-size: 0.9rem;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 3rem);
+  max-width: 1200px;
   z-index: 100;
-  background: radial-gradient(ellipse at 50% 0%, rgba(180, 0, 170, 0.3) 0%, rgba(80, 0, 100, 0.15) 50%, transparent 100%);
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-left, .nav-right {
@@ -70,8 +79,11 @@ a {
 }
 
 .navbar--scrolled {
-  padding: 0.8rem 2rem;
-  background: transparent;
+  padding: 0.6rem 2rem;
+  top: 1rem;
+  background: rgba(10, 10, 10, 0.85);
+  border-color: rgba(220, 0, 212, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(220, 0, 212, 0.15);
 }
 
 .header-logo {
