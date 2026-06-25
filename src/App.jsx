@@ -259,11 +259,11 @@ function App() {
           <a href="#home">Accueil</a>
           <a href="#work">Mes Projets</a>
           <a href="#about">Expertise</a>
+          <a href="#contact" className="btn-contact">Contact</a>
+          <button className="btn-offer" onClick={() => setOfferOpen(true)}>✦ Mon Offre</button>
         </div>
 
         <div className="nav-right">
-          <a href="#contact" className="btn-contact">Contact</a>
-          <button className="btn-offer" onClick={() => setOfferOpen(true)}>✦ Mon Offre</button>
         </div>
       </nav>
 
