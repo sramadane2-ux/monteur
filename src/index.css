@@ -968,6 +968,63 @@ textarea.form-input {
   margin: 1rem 0;
 }
 
+/* Value stacking list */
+.offer-value-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.offer-value-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.offer-item-name {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.82rem;
+}
+.offer-item-price {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.82rem;
+  white-space: nowrap;
+  text-decoration: line-through;
+}
+
+/* Total & Investment rows */
+.offer-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0 0.3rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+}
+.offer-total-strike {
+  color: rgba(255,255,255,0.35);
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+.offer-invest-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+.offer-invest-price {
+  font-size: 1.6rem;
+  font-family: var(--font-heading);
+  color: var(--violet);
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 20px rgba(220,0,212,0.5);
+}
+
+/* Keep old offer-list for potential reuse */
 .offer-list {
   list-style: none;
   display: flex;

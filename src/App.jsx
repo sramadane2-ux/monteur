@@ -9,17 +9,41 @@ const OfferModal = ({ onClose }) => (
 
       <div className="offer-badge">2 PLACES / MOIS</div>
 
-      <h2 className="offer-title">Le Pack<br /><span>SaaS Acquisition</span></h2>
-      <p className="offer-promise">En 14 jours, sans aucun effort de votre part, je transforme votre idée en un SaaS fonctionnel avec sa vidéo explainer premium — pensé pour convertir dès le premier regard.</p>
+      <h2 className="offer-title">Le Pack <span>Launchpad</span></h2>
+      <p className="offer-promise">Pour que le prix vous paraisse dérisoire, voici la valeur réelle de chaque élément inclus dans votre pack :</p>
 
       <div className="offer-divider" />
 
-      <ul className="offer-list">
-        <li><span className="offer-check">✦</span><div><strong>Vidéo Explainer SaaS Premium</strong><span>Style Iman Gadzhi — montage épuré, impactant, optimisé conversion</span></div></li>
-        <li><span className="offer-check">✦</span><div><strong>Fichiers sources structurés</strong><span>Réutilisables, documentés, livrés avec le projet</span></div></li>
-        <li><span className="offer-check">✦</span><div><strong>Session consulting stratégique 30 min</strong><span>On analyse ensemble le positionnement de votre SaaS</span></div></li>
-        <li><span className="offer-check">✦</span><div><strong>Zéro intermédiaire</strong><span>Je gère le motion design, la vidéo et la stratégie. Vous gérez votre business.</span></div></li>
+      <ul className="offer-value-list">
+        <li>
+          <span className="offer-item-name">✦ Développement de la Mini-App Web</span>
+          <span className="offer-item-price">~3 500 €</span>
+        </li>
+        <li>
+          <span className="offer-item-name">✦ Vidéo Explainer Motion Design Premium</span>
+          <span className="offer-item-price">~1 500 €</span>
+        </li>
+        <li>
+          <span className="offer-item-name">✦ Landing Page optimisée & Config. Domaine</span>
+          <span className="offer-item-price">~800 €</span>
+        </li>
+        <li>
+          <span className="offer-item-name">✦ Pack de 3 Miniatures Haute Conversion</span>
+          <span className="offer-item-price">~200 €</span>
+        </li>
       </ul>
+
+      <div className="offer-divider" />
+
+      <div className="offer-total-row">
+        <span>Valeur totale réelle</span>
+        <span className="offer-total-strike">6 000 €</span>
+      </div>
+
+      <div className="offer-invest-row">
+        <span>Votre investissement unique</span>
+        <span className="offer-invest-price">X XXX €</span>
+      </div>
 
       <div className="offer-divider" />
 
