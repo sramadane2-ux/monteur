@@ -68,10 +68,11 @@ const OfferModal = ({ onClose }) => {
       <div className="offer-modal" onClick={e => e.stopPropagation()}>
       <button className="offer-close" onClick={onClose}>✕</button>
 
-      <div className="offer-scarcity" style={{ justifyContent: 'center', marginBottom: '1.5rem', background: 'rgba(255, 0, 0, 0.1)', padding: '0.8rem', borderRadius: '12px', border: '1px solid rgba(255, 0, 0, 0.3)' }}>
+      <div className="offer-scarcity" style={{ justifyContent: 'center', marginBottom: '0.5rem', background: 'rgba(255, 0, 0, 0.1)', padding: '0.8rem', borderRadius: '12px', border: '1px solid rgba(255, 0, 0, 0.3)' }}>
         <span className="offer-dot-red"></span>
         Places disponibles ce mois-ci : <strong>1 / 3</strong>
       </div>
+      <p className="offer-exclusivity" style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)' }}>Je n'accepte que 3 clients par mois pour garantir la qualité.</p>
 
       <h2 className="offer-title">Le Pack <span>Launchpad</span></h2>
       <p className="offer-promise">Tout ce qui est inclus dans votre pack, et ce que ça vous coûterait si vous le commandiez séparément :</p>
