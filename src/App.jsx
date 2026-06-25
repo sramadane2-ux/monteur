@@ -5,15 +5,19 @@ import './index.css';
 const VideoCard = ({ videoId, isEmpty, isVertical }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const embedUrl = isVertical
+    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=${videoId}`
+    : `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+
   return (
     <div className="portfolio-item" style={{ paddingBottom: isVertical ? '177.77%' : '56.25%' }}>
       {isPlaying && !isEmpty ? (
         <iframe
           className="portfolio-video"
-          src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1`}
+          src={embedUrl}
           title="YouTube video player"
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
       ) : isEmpty ? (
