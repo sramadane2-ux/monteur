@@ -70,31 +70,31 @@ const OfferModal = ({ onClose }) => {
 
       <div className="offer-scarcity" style={{ justifyContent: 'center', marginBottom: '0.5rem', background: 'rgba(255, 0, 0, 0.1)', padding: '0.8rem', borderRadius: '12px', border: '1px solid rgba(255, 0, 0, 0.3)' }}>
         <span className="offer-dot-red"></span>
-        Places disponibles ce mois-ci : <strong>1 / 3</strong>
+        Places disponibles ce mois-ci : <strong>2 / 4</strong>
       </div>
-      <p className="offer-exclusivity" style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)' }}>Je n'accepte que 3 clients par mois pour garantir la qualité.</p>
+      <p className="offer-exclusivity" style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)' }}>Je n'accepte que 4 clients par mois pour garantir la qualité.</p>
 
-      <h2 className="offer-title">Le Pack <span>Launchpad</span></h2>
-      <p className="offer-promise">Tout ce qui est inclus dans votre pack, et ce que ça vous coûterait si vous le commandiez séparément :</p>
+      <h2 className="offer-title">Le Pack <span>Content Creator</span></h2>
+      <p className="offer-promise">Tout ce qui est inclus dans votre pack mensuel, et ce que ça vous coûterait si vous le commandiez séparément :</p>
 
       <div className="offer-divider" />
 
       <ul className="offer-value-list">
         <li>
-          <span className="offer-item-name"><span className="offer-star">✦</span> Développement de la Mini-App Web + Intégration IA</span>
-          <span className="offer-item-price">~3 500 €</span>
+          <span className="offer-item-name"><span className="offer-star">✦</span> 4 Vidéos Long Format montées</span>
+          <span className="offer-item-price">~2 000 €</span>
         </li>
         <li>
-          <span className="offer-item-name"><span className="offer-star">✦</span> Vidéo Explainer Motion Design Premium</span>
-          <span className="offer-item-price">~1 500 €</span>
+          <span className="offer-item-name"><span className="offer-star">✦</span> 10 Shorts / Reels optimisés</span>
+          <span className="offer-item-price">~1 000 €</span>
         </li>
         <li>
-          <span className="offer-item-name"><span className="offer-star">✦</span> Landing Page optimisée & Config. Domaine</span>
+          <span className="offer-item-name"><span className="offer-star">✦</span> 2 Vidéos VSL (Sales Letter)</span>
           <span className="offer-item-price">~800 €</span>
         </li>
         <li>
-          <span className="offer-item-name"><span className="offer-star">✦</span> Vidéo VSL 2</span>
-          <span className="offer-item-price">~300 $</span>
+          <span className="offer-item-name"><span className="offer-star">✦</span> 1 Landing Page optimisée</span>
+          <span className="offer-item-price">~600 €</span>
         </li>
       </ul>
 
@@ -102,14 +102,15 @@ const OfferModal = ({ onClose }) => {
 
       <div className="offer-total-row">
         <span>Valeur totale réelle</span>
-        <span className="offer-total-strike">6 000 €</span>
+        <span className="offer-total-strike">4 400 €</span>
       </div>
 
       <div className="offer-invest-row">
         <span>Votre investissement unique</span>
-        <span className="offer-invest-price">1 997 €</span>
+        <span className="offer-invest-price">1 497 €</span>
       </div>
 
+      <div className="offer-divider" />
 
       {/* CTA */}
       <button className="offer-cta" onClick={() => setShowWaMini(true)}>Réserver ma place →</button>
