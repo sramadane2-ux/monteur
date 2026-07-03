@@ -249,6 +249,7 @@ function App() {
           <a href="#work">Mes Projets</a>
           <a href="#about">Expertise</a>
           <a href="#contact" className="btn-contact">Contact</a>
+          <button className="btn-calendly" onClick={() => window.Calendly && window.Calendly.initPopupWidget({ url: 'https://calendly.com/sramadane2/30min' })}>📅 Réserver un appel</button>
           <button className="btn-offer" onClick={() => setOfferOpen(true)}>✦ Mon Offre</button>
         </div>
 
@@ -460,6 +461,17 @@ function App() {
 
             <button type="submit" className="btn-submit">ENVOYER</button>
           </form>
+
+          {/* Calendly */}
+          <div style={{ textAlign: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Ou réservez directement un appel</p>
+            <button
+              className="btn-calendly-lg"
+              onClick={() => window.Calendly && window.Calendly.initPopupWidget({ url: 'https://calendly.com/sramadane2/30min' })}
+            >
+              📅 Réserver un appel de 30 min →
+            </button>
+          </div>
         </section>
       </main>
       <footer className="footer">
